@@ -20,7 +20,10 @@ class Utils {
 
 	static $lipsumMemoized = false;
 	static $lipsum;
-
+/***
+ * This function doesn't do anything useful now that get_magic_quotes_gpc() is deprecated,
+ * and isn't called from anywhere in the code, so commenting out the whole thing rather
+ * than editing it down to nothing. 
 
 	public static function cleanHash($hash) {
 		$cleanHash = $hash;
@@ -38,7 +41,7 @@ class Utils {
 			}
 		}
 		return $cleanHash;
-	}
+	} */
 
 
 	/**
@@ -79,6 +82,10 @@ class Utils {
 	 * for safe use in SQL statements.
 	 */
 	public static function sanitize($input) {
+/***** Commenting this out - doesn't do anything now. Would be cleaner
+		to cleanup the places that call it, but with v4.0 on the way, not 
+		that important. 
+
 		if (is_array($input)) {
 			$output = array();
 			foreach ($input as $k=>$i) {
@@ -90,7 +97,8 @@ class Utils {
 			} else {
 				$output = $input;
 			}
-		}
+		} 
+*****/
 
 		return $output;
 	}

@@ -176,7 +176,7 @@ END;
 		if ($this->genEnvironment == Constants::GEN_ENVIRONMENT_API) {
 			$template = $this->userSettings->export->settings->customTemplate;
 		} else {
-			$template = (get_magic_quotes_gpc()) ? stripslashes($this->userSettings["etXMLCustomHTMLSource"]) : $this->userSettings["etXMLCustomHTMLSource"];
+			$template = $this->userSettings["etXMLCustomHTMLSource"];
 		}
 		return $template;
 	}
