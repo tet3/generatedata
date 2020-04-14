@@ -99,7 +99,7 @@ class Utils {
 			}
 		} 
 *****/
-
+		$output = $input;
 		return $output;
 	}
 
