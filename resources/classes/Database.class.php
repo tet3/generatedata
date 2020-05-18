@@ -16,13 +16,13 @@ class Database {
 		try {
 			$this->link = mysqli_connect($dbHostname, $dbUsername, $dbPassword, $dbName);
 		} catch (Exception $e) {
-			// or die("Couldn't connect to database: " . mysql_error());
+		    die("Couldn't connect to database: " . mysql_error());
 		}
 
 		try {
 			@mysqli_query($this->link, "SET NAMES 'utf8'");
 		} catch (Exception $e) {
-		 //  die ("couldn't find database '$g_db_name': " . mysql_error());
+		    die ("couldn't find database '$g_db_name': " . mysql_error());
 		}
 	}
 

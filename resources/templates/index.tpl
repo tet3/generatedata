@@ -6,6 +6,11 @@
 	<meta name="description" content="{$L.meta_description}" />
 	<meta name="keywords" content="{$L.meta_keywords}" />
 
+	<link rel="apple-touch-icon" sizes="180x180" href="resources/themes/classic/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="resources/themes/classic/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="resources/themes/classic/images/favicon-16x16.png">
+	<link rel="manifest" href="resources/themes/classic/images/site.webmanifest">
+
 	{if $useMinifiedResources && $minifiedResourcePaths != false}
 		<link rel="stylesheet" type="text/css" href="{$minifiedResourcePaths.coreCSS}" />
 		<link rel="stylesheet" type="text/css" href="resources/css/smoothness/jquery-ui.min.css" />
